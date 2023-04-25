@@ -39,4 +39,8 @@ model Account {
   scope String?
   id_token String?  @db.String
   session_state String?
+// the below establishes a connection between model User and model Account
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([provider, providerAccountId])
 }
