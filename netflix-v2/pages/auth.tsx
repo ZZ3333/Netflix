@@ -24,12 +24,14 @@ const Auth = () => {
                             {variant === 'login' ? 'Sign in' : 'Register'}
                         </h2>
                         <div className="flex flex-col gap-4">
+                            {variant === 'register' && (
                         <Input 
                                 label="Username"
                                 onChage={(e: any) => setName(e.target.value)}
                                 id="name"
                                 value={name}
                             />
+                            )}
                             <Input 
                                 label="Email"
                                 onChage={(e: any) => setEmail(e.target.value)}
