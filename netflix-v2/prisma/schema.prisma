@@ -23,3 +23,20 @@ model User {
   sessions Session[]
   accounts Account[]
 }
+
+// model Account will be used / created as soon a a user signs in / creates an account with Google / GitHub etc
+
+model Account {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  userId String @db.ObjectId
+  type String
+  provider String
+  providerAccountId String
+  refresh_toke String? @db.String
+  access_token String? @db.String
+  expires_at Int?
+  token_type String?
+  scope String?
+  id_token String?  @db.String
+  session_state String?
+}
