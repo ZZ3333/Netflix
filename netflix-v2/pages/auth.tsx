@@ -4,6 +4,7 @@ import { useState } from "react";
 const Auth = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
     return (
         <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg no-repeat bg-center bg-fixed bg-cover]">
             <div className="bg-black w-full h-full lg:bg-opacity-50">
@@ -19,18 +20,27 @@ const Auth = () => {
                         <div className="flex flex-col gap-4">
                         <Input 
                                 label="Username"
-                                onChage={(e) => setEmail(e.target.value)}
+                                onChage={(e: any) => setName(e.target.value)}
                                 id="name"
                                 value={name}
                             />
                             <Input 
                                 label="Email"
-                                onChage={(e) => setEmail(e.target.value)}
+                                onChage={(e: any) => setEmail(e.target.value)}
                                 id="email"
                                 type="email"
                                 value={email}
                             />
+                            <Input 
+                                label="password"
+                                onChage={(e: any) => setPassword(e.target.value)}
+                                id="password"
+                                value={password}
+                            />
                         </div>
+                        <button className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover: hover:bg-red-700 transition">
+                            Login
+                        </button>
                     </div>
                 </div>
             </div>
