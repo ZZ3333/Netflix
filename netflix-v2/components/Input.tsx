@@ -1,3 +1,14 @@
+import React from "react";
+
+interface InputProps {
+    id: string;
+    onChage: any;
+    value: string;
+    label: string;
+    type?: string;
+}
+
+
 const Input = () => {
     return (
         <div className="relative ">
