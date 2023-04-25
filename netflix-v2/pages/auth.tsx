@@ -48,7 +48,7 @@ const Auth = () => {
                             />
                         </div>
                         <button className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover: hover:bg-red-700 transition">
-                            Login
+                            {variant === 'login' ? 'Login' : 'Sign up'}
                         </button>
                         <p className="text-neutral-500 mt-12">
                             First time using Netflix?
