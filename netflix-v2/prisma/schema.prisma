@@ -56,5 +56,10 @@ model Session {
 }
 
 model VerificationToken {
-  
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    identfier String
+    token String @unique
+    expires DateTime
+
+    @@unique([identfier, token])
 }
