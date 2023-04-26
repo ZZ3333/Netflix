@@ -44,3 +44,8 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   @@unique([provider, providerAccountId])
 }
+
+
+model Session {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+}
