@@ -54,3 +54,7 @@ model Session {
 
     user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
+model VerificationToken {
+  
+}
