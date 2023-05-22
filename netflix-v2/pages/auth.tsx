@@ -19,8 +19,7 @@ const Auth = () => {
                 email,
                 name,
                 password
-
-            })
+            });
         } catch(error) {
             console.log(error)
         }
