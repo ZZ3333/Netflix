@@ -21,6 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return res.status(422).json({error: 'Email Taken'})
         }
 
+        const hashedPassword = await bcrypt.hash(password, 12)
+
     } catch(error) {
         console.log(error);
         return res.status(400).end();
