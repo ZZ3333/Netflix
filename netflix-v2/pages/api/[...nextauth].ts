@@ -1,0 +1,52 @@
+import NextAuth from "next-auth/next";
+import Credentials from "next-auth/providers/credentials";
+// import Error from "next/error";
+import { compare } from 'bcrypt';
+
+import prismadb from '@/lib/prismadb';
+
+export default NextAuth ({
+    providers: [
+        Credentials({
+            id: 'credentials',
+            name: 'Credentials',
+            credentials: {
+                email: {
+                    label: 'Email',
+                    type: 'text',
+                },
+                password: {
+                    label: 'Password',
+                    type: 'password',
+                }
+            },
+            // the function below will be used to accept credentials (conditional statements)
+                async authorize(credentials) {
+                if (!credentials?.email || !credentials?.password) {
+                    throw new Error('Email and password required');
+                }
+
+                const user = await prismadb.user.findUnique({
+                    where: {
+                        email: credentials.email
+                    }
+                });
+                if (!user || !user.hashedPassowrd) {
+                    throw new Error('Email does not exist');
+                }
+
+                const isCorrectPassword = await compare(
+                    credentials.password, 
+                    user.hashedPassowrd
+                );
+
+                if (!isCorrectPassword) {
+                    throw new Error('Incorrect password');
+                }
+
+                return user;
+
+            }
+        })
+    ]
+})
