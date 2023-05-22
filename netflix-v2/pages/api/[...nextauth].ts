@@ -50,6 +50,7 @@ export default NextAuth ({
         })
     ],
     pages: {
-        
-    }
+        signIn: '/auth',
+    },
+    debug: process.env.NODE_ENV === 'development'
 })
