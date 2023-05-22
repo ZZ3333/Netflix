@@ -48,5 +48,8 @@ export default NextAuth ({
 
             }
         })
-    ]
+    ],
+    pages: {
+        
+    }
 })
