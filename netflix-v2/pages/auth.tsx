@@ -40,7 +40,7 @@ const Auth = () => {
             console.log(error)
             }
         }, [email, password])
-        
+
         return (
         <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg no-repeat bg-center bg-fixed bg-cover]">
             <div className="bg-black w-full h-full lg:bg-opacity-50">
@@ -77,7 +77,7 @@ const Auth = () => {
                                 value={password}
                             />
                         </div>
-                        <button onClick={register} className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover: hover:bg-red-700 transition">
+                        <button onClick={variant === 'login' ? login : register} className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover: hover:bg-red-700 transition">
                             {variant === 'login' ? 'Login' : 'Sign up'}
                         </button>
                         <p className="text-neutral-500 mt-12">
