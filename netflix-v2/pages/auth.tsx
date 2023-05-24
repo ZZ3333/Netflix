@@ -26,7 +26,22 @@ const Auth = () => {
         }
 
     }, [email, name, password]);
-    return (
+
+    const login = useCallback(async () => {
+
+        try {
+            await signIn('credentials', {
+                email,
+                password,
+                redirect: false,
+                callbackUrl: '/'
+            });
+        } catch(error) {
+            console.log(error)
+            }
+        }, [email, password])
+        
+        return (
         <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg no-repeat bg-center bg-fixed bg-cover]">
             <div className="bg-black w-full h-full lg:bg-opacity-50">
                 <nav className="px-12 py-5">
