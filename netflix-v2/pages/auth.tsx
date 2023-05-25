@@ -4,6 +4,9 @@ import { useCallback, useState } from "react";
 import { signIn} from 'next-auth/react';
 import { useRouter } from "next/router";
 
+import { FcGoogle } from 'react-icons/fc';
+import { FaGitHub } from 'react-icons/fa';
+
 const Auth = () => {
 
     const router = useRouter();
