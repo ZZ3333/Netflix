@@ -10,6 +10,10 @@ import prismadb from '@/lib/prismadb';
 
 export default NextAuth ({
     providers: [
+        GithubProviders({
+            clientId: process.env.GITHUB_ID || '',
+            clientSecret: process.env.GITHUB_SECRET || ''
+        }),
         Credentials({
             id: 'credentials',
             name: 'Credentials',
