@@ -93,6 +93,9 @@ const Auth = () => {
                         <button onClick={variant === 'login' ? login : register} className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover: hover:bg-red-700 transition">
                             {variant === 'login' ? 'Login' : 'Sign up'}
                         </button>
+                        <div className="flex flex-row items-center gap-4 mt justify-center">
+
+                        </div>
                         <p className="text-neutral-500 mt-12">
                             {variant === 'login' ? 'First time using Netflix?' : 'Already have an account?'}
                             <span onClick={toggleVariant} className="text-white ml-1 hover:underline coursor-pointer">
