@@ -3,6 +3,9 @@ import Credentials from "next-auth/providers/credentials";
 // import Error from "next/error";
 import { compare } from 'bcrypt';
 
+import GoogleProvider from 'next-auth/providers/google'
+import GithubProviders from 'next-auth/providers/github'
+
 import prismadb from '@/lib/prismadb';
 
 export default NextAuth ({
