@@ -1,8 +1,9 @@
 import { NextPageContext } from "next"
-import { signOut } from "next-auth/react"
+import { getSession, signOut } from "next-auth/react"
 
 export async function getServerSideProps(context: NextPageContext) {
-  
+  const session = await getSession(context);
+
 }
 
 export default function Home() {
