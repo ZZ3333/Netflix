@@ -1,3 +1,7 @@
+import { NextPageContext } from "next";
+import { getSession } from "next-auth/react";
+
+
 const Profiles = () => {
     return (
         <div>
