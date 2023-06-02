@@ -29,11 +29,11 @@ const Auth = () => {
                 redirect: false,
                 callbackUrl: '/'
             });
-            
+
         } catch(error) {
             console.log(error)
             }
-        }, [email, password, router])
+        }, [email, password])
 
     const register = useCallback(async () => {
         try {
