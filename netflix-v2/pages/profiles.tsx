@@ -23,7 +23,7 @@ const Profiles = () => {
     return (
         <div className=" flex items-center h-full justify-center">
             <div className=" flex flex-col">
-
+                <h1 className="text-3xl md:text-5xl text-white text-center">Who is watching?</h1>
             </div>
         </div>
     )
