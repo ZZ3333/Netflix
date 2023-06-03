@@ -21,7 +21,7 @@ export async function getServerSideProps(context: NextPageContext) {
 
 const Profiles = () => {
     return (
-        <div>
+        <div className=" flex items-center h-full justify-center">
             <p className="text-white text-4xl">Profiles</p>
         </div>
     )
