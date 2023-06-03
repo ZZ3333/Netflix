@@ -1,3 +1,4 @@
+import useCurrentUser from "@/hooks/useCurrentUser";
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 
@@ -20,6 +21,7 @@ export async function getServerSideProps(context: NextPageContext) {
 
 
 const Profiles = () => {
+    const { data: user } = useCurrentUser();
     return (
         <div className=" flex items-center h-full justify-center">
             <div className=" flex flex-col">
@@ -52,7 +54,7 @@ const Profiles = () => {
                             text-center
                             group-hover: text-white
                             ">
-                                Name
+                                {user?.name}
                             </div>
 
                         </div>
