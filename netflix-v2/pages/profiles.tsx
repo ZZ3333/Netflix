@@ -45,6 +45,15 @@ const Profiles = () => {
                                 <img src="/images/default-blue.png" alt="Profile"></img>
 
                             </div>
+                            <div className="
+                            mt-4
+                            text-gray-400
+                            text-2xl
+                            text-center
+                            group-hover: text-white
+                            ">
+                                Name
+                            </div>
 
                         </div>
 
