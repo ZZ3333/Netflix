@@ -22,8 +22,6 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 export default function Home() {
-
-  const { data: user} = useCurrentUser();
   return (
     <>
       
