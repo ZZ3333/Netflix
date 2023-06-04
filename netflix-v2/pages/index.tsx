@@ -1,5 +1,5 @@
 import { NextPageContext } from "next"
-import { getSession, signOut } from "next-auth/react"
+import { getSession } from "next-auth/react"
 
 import useCurrentUser from "@/hooks/useCurrentUser";
 
