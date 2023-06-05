@@ -22,6 +22,7 @@ const Navbar = () => {
                 hidden
                 lg:flex
                 ">
+                <NavbarItem />
 
                 </div>
 
