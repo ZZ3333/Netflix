@@ -1,3 +1,5 @@
+import NavbarItem from "./NavbarItem";
+
 const Navbar = () => {
     return (
         <nav className="w-full fixed z-40">
