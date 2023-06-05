@@ -1,7 +1,8 @@
 const NavbarItem = () => {
     return (
-        <div>
-            
+        <div className="text-white cursor-pointer hover:text-gray-300 transition">
+            Home
+
         </div>
 
         )
