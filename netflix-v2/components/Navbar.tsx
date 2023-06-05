@@ -24,7 +24,12 @@ const Navbar = () => {
                 hidden
                 lg:flex
                 ">
-                <NavbarItem />
+                <NavbarItem label="Home"/>
+                <NavbarItem label="Series"/>
+                <NavbarItem label="Films"/>
+                <NavbarItem label="New & Popular"/>
+                <NavbarItem label="My List"/>
+                <NavbarItem label="Browse by Languages"/>
 
                 </div>
 
