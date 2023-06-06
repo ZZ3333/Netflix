@@ -32,6 +32,9 @@ const Navbar = () => {
                 <NavbarItem label="Browse by Languages"/>
 
                 </div>
+                <div className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
+
+                </div>
 
             </div>
         </nav>
