@@ -35,7 +35,7 @@ const Navbar = () => {
                 </div>
                 <div className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
                     <p className="text-white text-sm">Browse</p>
-                    <BsChevronDown />
+                    <BsChevronDown className="text-white transition"/>
 
                 </div>
 
