@@ -1,8 +1,10 @@
 import NavbarItem from "./NavbarItem";
 import MobileMenu from "./MobileMenu";
 import { BsChevronDown } from 'react-icons/bs';
+import { useState } from "react";
 
 const Navbar = () => {
+    const [showMobileMenu, setShowMobileMeny] = useState(false)
     return (
         <nav className="w-full fixed z-40">
             <div className="
@@ -37,7 +39,7 @@ const Navbar = () => {
                 <div className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
                     <p className="text-white text-sm">Browse</p>
                     <BsChevronDown className="text-white transition"/>
-                    <MobileMenu />
+                    <MobileMenu visible/>
 
                 </div>
 
