@@ -1,4 +1,5 @@
 import NavbarItem from "./NavbarItem";
+import MobileMenu from "./MobileMenu";
 import { BsChevronDown } from 'react-icons/bs';
 
 const Navbar = () => {
