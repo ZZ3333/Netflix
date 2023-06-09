@@ -45,6 +45,8 @@ const Navbar = () => {
                     <p className="text-white text-sm">Browse</p>
                     <BsChevronDown className="text-white transition"/>
                     <MobileMenu visible={showMobileMenu}/>
+                </div>
+                <div className="flex flex-row ml-auto gap-7 items-center">
 
                 </div>
 
