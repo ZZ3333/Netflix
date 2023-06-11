@@ -55,7 +55,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-row items-center gap-2 cursor-pointer relative">
                         <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
-                            <img src="/images/default-blue.png"></img>
+                            <img src="/images/default-blue.png" alt=""></img>
                         </div>
                         <BsChevronDown className="text-white transition"/>
 
