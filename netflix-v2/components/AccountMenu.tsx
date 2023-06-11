@@ -1,6 +1,16 @@
 import { signOut } from "next-auth/react";
+import React from "react";
 
-const AccountMenu = () => {
+interface AccountMenuProps {
+    visible?: boolean
+}
+
+const AccountMenu: React.FC<AccountMenuProps> = ({
+    visible
+}) => {
+    if (!visible) {
+        return null;
+    }
     return (
         <div>
             
