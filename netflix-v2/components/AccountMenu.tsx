@@ -19,6 +19,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({
                     <p className="text-white text-sm group-hover/item:underline">Username</p>
 
                 </div>
+                <hr className="bg-gray-600 border-0 h-px my-4"></hr>
 
             </div>
             
