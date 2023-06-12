@@ -6,8 +6,14 @@ import AccountMenu from "./AccountMenu";
 
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const [showAccountMenu, setShowAccountMenu] = useState(false);
 
     const toggleMobileMenu = useCallback(() => {
+        setShowMobileMenu((current) => !current);
+
+    }, [])
+
+    const toggleAccountMenu = useCallback(() => {
         setShowMobileMenu((current) => !current);
 
     }, [])
@@ -59,7 +65,7 @@ const Navbar = () => {
                             <img src="/images/default-blue.png" alt=""></img>
                         </div>
                         <BsChevronDown className="text-white transition"/>
-                        <AccountMenu visible />
+                        <AccountMenu visible={showAccountMenu} />
 
                     </div>
                 </div>
