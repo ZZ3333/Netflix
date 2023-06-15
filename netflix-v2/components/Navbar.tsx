@@ -2,7 +2,7 @@ import NavbarItem from "./NavbarItem";
 import MobileMenu from "./MobileMenu";
 import { BsChevronDown, BsSearch, BsBell } from 'react-icons/bs';
 import { useCallback, useState } from "react";
-import AccountMenu from "./AccountMenu";
+// import AccountMenu from "./AccountMenu";
 
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
