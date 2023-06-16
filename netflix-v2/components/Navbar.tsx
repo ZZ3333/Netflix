@@ -6,7 +6,7 @@ import { useCallback, useState } from "react";
 
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
-    const [showAccountMenu, setShowAccountMenu] = useState(false);
+    const [showAccountMenu, setShowAccountMenu] = useState(true);
 
     const toggleMobileMenu = useCallback(() => {
         setShowMobileMenu((current) => !current);
