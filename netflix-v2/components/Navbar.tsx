@@ -6,7 +6,7 @@ import AccountMenu from "./AccountMenu";
 
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
-    const [showAccountMenu, setShowAccountMenu] = useState(true);
+    const [showAccountMenu, setShowAccountMenu] = useState(false);
 
     const toggleMobileMenu = useCallback(() => {
         setShowMobileMenu((current) => !current);
@@ -14,7 +14,7 @@ const Navbar = () => {
     }, [])
 
     const toggleAccountMenu = useCallback(() => {
-        setShowMobileMenu((current) => !current);
+        setShowAccountMenu((current) => !current);
 
     }, [])
     return (
