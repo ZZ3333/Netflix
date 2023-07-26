@@ -1,7 +1,7 @@
 import NavbarItem from "./NavbarItem";
 import MobileMenu from "./MobileMenu";
 import { BsChevronDown, BsSearch, BsBell } from 'react-icons/bs';
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import AccountMenu from "./AccountMenu";
 
 const TOP_OFFSET = 66;
@@ -9,6 +9,19 @@ const TOP_OFFSET = 66;
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [showAccountMenu, setShowAccountMenu] = useState(false);
+    const [showBackground, setShowBackground] = useState(false);
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY >= TOP_OFFSET) {
+                setShowBackground(true);
+            } else {
+                setShowBackground(false)
+            }
+        }
+
+    },[])
 
     const toggleMobileMenu = useCallback(() => {
         setShowMobileMenu((current) => !current);
