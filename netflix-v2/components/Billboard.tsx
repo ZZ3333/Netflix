@@ -39,11 +39,14 @@ const Billboard =() => {
                 md:w-[80%]
                 lg:w-[50%]
                 drop-shadow-xl
-
-
                 ">
                     {data?. description}
                 </p>
+                <div>
+                    <button>
+                        More info
+                    </button>
+                </div>
             </div>
         </div>
     )
