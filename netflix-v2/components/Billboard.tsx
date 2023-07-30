@@ -1,6 +1,8 @@
 import useBillboard from "@/hooks/useBillboards";
 import React from "react";
 
+import {AiOutlineInfoCircle} from 'react-icons/ai';
+
 const Billboard =() => {
     const {data} = useBillboard()
     return (
@@ -59,6 +61,7 @@ const Billboard =() => {
                     hover:bg-opacity-20
                     transition
                     ">
+                        <AiOutlineInfoCircle  className="mr-1"/>
                         More info
                     </button>
                 </div>
