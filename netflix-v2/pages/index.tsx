@@ -29,6 +29,10 @@ export default function Home() {
     <>
       <Navbar />
       <Billboard />
+      <div className="pb-40">
+      <MovieList />
+      </div>
+      
       
 
     </>
